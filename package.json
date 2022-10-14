@@ -1,0 +1,21 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "check": "node index.js",
+    "sort": "node sortNames.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "playwright": "^1.26.0"
+  },
+  "devDependencies": {
+    "expect-playwright": "^0.8.0",
+    "playwright-expect": "^0.1.2"
+  }
+}

@@ -1,0 +1,15 @@
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+node_modules/
+jspm_packages/
+
+# Snowpack dependency directory (https://snowpack.dev/)
+web_modules/
+# *.txt
+example.txt
+
+package-lock.json
