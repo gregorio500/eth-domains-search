@@ -60,9 +60,18 @@ const checkDomains = async () => {
                     await page.click('xpath=//main/div[2]/a')
                     await page.waitForNavigation()
                     const selector = 'xpath=//main/div[2]/div[2]/div[4]/div[2]/div[2]/div[1]'
-                    await page.waitForSelector(selector, { timeout: 0 })
-                    const premiumExpire = await page.locator(selector).textContent()
-                    appendData('./results/available-premium.txt', name+" "+premiumExpire)
+                    try {
+                        await page.waitForSelector(selector, { timeout: 1000, state: 'visible'})
+                    } catch { 
+                        appendData('./results/available.txt', name + " ---premium expired")
+                        console.log("premium selector is not visible and has been added to available.txt") 
+                    }
+                    // if(await page.isVisible(selector)) {
+                    //     const premiumExpire = await page.locator(selector).textContent()
+                    //     appendData('./results/available-premium.txt', name+" "+premiumExpire)
+                    // } else {             
+                    //     console.log(console.log('the selector for premium is not visible '+selector))}
+                    //     appendData('./results/available.txt', name)
                 } else {
                     appendData('./results/available.txt', name)  //this is not a premium. Should be as a regular available name by default
                 }

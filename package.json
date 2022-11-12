@@ -1,7 +1,6 @@
 {
   "name": "playwright",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "check": "node index.js",
@@ -17,5 +16,14 @@
   "devDependencies": {
     "expect-playwright": "^0.8.0",
     "playwright-expect": "^0.1.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregorio500/eth-domains-search.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gregorio500/eth-domains-search/issues"
+  },
+  "homepage": "https://github.com/gregorio500/eth-domains-search#readme",
+  "description": ""
 }
